@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <h1>Quizzes List</h1>
+  <table class="table w-75 border-start border-end p-5">
+    <thead class="bg-success">
+      <th>S.No</th>
+      <th>Course Name</th>
+      <th>Available Quizzes</th>
+    </thead>
+    <tbody *ngFor="let c of course; let i = index">
+      <tr>
+        <td>{{ i + 1 }}</td>
+        <td>{{ c.courseName }}</td>
+        <td>
+          <ol>
+            <li *ngFor="let q of c.quizzes">
+              {{ q.quizName }} {{ q.quizDifLevel }}
+            </li>
+          </ol>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

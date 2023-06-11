@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <h1>Available Quizzes in {{qzz?.courseName}}</h1>
+  <div class="row">
+    <div class=" card card-inverse  " *ngFor="let q of quiz" >
+
+      <h3 class="card-title border-bottom font-monospace">{{q.quizName}}</h3>
+      <p class="card-text">Difficulty level : {{q.quizDifLevel}}</p>
+      <div id="buttons">
+        <button class="btn btn-primary" data-toggle="modal" data-target="#addCourseModal" (click)="passCourseId(q.quizId)">Update</button>
+        <button class="btn btn-danger" (click)=" deleteQuiz(q.quizId,q.quizName,q.quizDifLevel)">Delete</button>
+        </div>
+
+  </div>
+  <div class="col-2 card card-inverse text-white " id="add"  data-toggle="modal" data-target="#myModal">
+    <h1 id="plus"> &plus;</h1>
+   </div>
+</div>
+
+
+<app-add-quiz></app-add-quiz>
+        <app-update-quiz data="{{selectedCourseId}}"></app-update-quiz>

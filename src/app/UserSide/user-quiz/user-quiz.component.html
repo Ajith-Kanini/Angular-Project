@@ -1,0 +1,11 @@
+<app-user-navbar></app-user-navbar>
+<h1>Course detail of {{qzz?.courseName}}</h1>
+<div class="row">
+  <div class=" card card-inverse  ">
+    <img src="assets/Images/SVG/{{ qzz?.courseName }}.svg" class="card-img-top" alt="Image Description" >
+    <h3 class="card-title border-bottom font-monospace">{{qzz?.courseName}}</h3>
+    <p class="card-text">Duration : {{qzz?.courseDuration}}</p>
+      <p class="card-text">Price : {{qzz?.courseFees|currency:"INR"}}</p>
+      <p class="card-text">Rating : {{qzz?.courseRating}}/10</p>
+  </div>
+</div>

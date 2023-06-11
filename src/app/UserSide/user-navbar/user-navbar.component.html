@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg">
+ <h1> <a class="navbar-brand" routerLink="/uHome"><img src="assets/Images/SVG/Logo.svg" height="50rem" alt="Image Description" ></a></h1>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="heading">
+    <h1>Course HUB</h1>
+  </div>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/uHome" >Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/uCourses" >Courses</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/uAllQuizzes" >Quizzes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"  routerLink="/Register" >Logout</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="modal" data-target="#AdminModal" id="adminlog">Admin login</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<app-admin-login></app-admin-login>

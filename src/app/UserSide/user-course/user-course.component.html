@@ -1,0 +1,95 @@
+<app-user-navbar></app-user-navbar>
+
+<div class="container">
+  <header>
+    <h1>Course List</h1>
+    <div class="row justify-content-center">
+      <div class="col">
+        <div class="input-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search..."
+            [(ngModel)]="search"
+            ((change))="filterCourses()"
+          />
+          <div class="input-group-append">
+            <button
+              class="btn btn-primary"
+              type="button"
+              (click)="filterCourses()"
+              #btn
+            >
+              Search
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div *ngIf="!condition; then Allcourse; else filteredcourses"></div>
+  <ng-template #filteredcourses>
+    <div class="row">
+      <div class="card card-inverse" *ngFor="let c of filteredCourses">
+        <img
+          src="assets/Images/SVG/{{ c.courseName }}.svg"
+          class="card-img-top"
+          alt="Image Description"
+          height="150rem"
+        />
+        <h3 class="card-title border-bottom font-monospace">
+          {{ c.courseName }}
+        </h3>
+        <p class="card-text">Duration: {{ c.courseDuration }}</p>
+        <div id="buttons">
+          <button
+            class="btn btn-primary"
+            data-toggle="modal"
+            data-target="#addCourseModal"
+            (click)="passCourseId(c.courseId)"
+          >
+            Add to cart
+          </button>
+          <button
+            [routerLink]="['/uQuizzes', c.courseId]"
+            class="btn btn-success mt-4"
+          >
+            View Details
+          </button>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template #Allcourse>
+    <div class="row">
+      <div class="card card-inverse" *ngFor="let c of course">
+        <img
+          src="assets/Images/SVG/{{ c.courseName }}.svg"
+          class="card-img-top"
+          alt="Image Description"
+          height="150rem"
+        />
+        <h3 class="card-title border-bottom font-monospace">
+          {{ c.courseName }}
+        </h3>
+        <p class="card-text">Duration: {{ c.courseDuration }}</p>
+        <div id="buttons">
+          <button
+            class="btn btn-primary"
+            data-toggle="modal"
+            data-target="#addCourseModal"
+            (click)="passCourseId(c.courseId)"
+          >
+            Add to cart
+          </button>
+          <button
+            [routerLink]="['/uQuizzes', c.courseId]"
+            class="btn btn-success mt-4"
+          >
+            View Details
+          </button>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</div>

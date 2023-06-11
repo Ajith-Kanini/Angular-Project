@@ -1,0 +1,21 @@
+#adminlog{
+  cursor: pointer;
+}
+nav{
+  background-color:#6C63FF;
+
+}
+a{
+  color: white;
+}
+#navbarNav{
+position: absolute;
+left: 60rem;
+}
+.heading{
+  /* font-family: Georgia, 'Times New Roman', Times, serif; */
+  color: white;
+  position: absolute;
+left: 26rem;
+}
+

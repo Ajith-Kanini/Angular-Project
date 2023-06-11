@@ -1,0 +1,43 @@
+<app-user-navbar></app-user-navbar>
+
+<div class="container">
+  <header>
+    <h1>Quizzes</h1>
+  <div class="row justify-content-center ">
+    <div class="col">
+      <div class="input-group">
+        <input type="search" class="form-control" placeholder="Search..." (input)="filterCourses($event)">
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="button">Search</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </header>
+  <div class="row"  *ngFor="let c of course" id="side">
+    <div class=" card card-inverse  ">
+      <img src="assets/Images/SVG/{{ c.courseName }}.svg" class="card-img-top" alt="Image Description" height="150rem">
+      <h3 class="card-title border-bottom font-monospace text-center">{{c.courseName}}</h3>
+    </div>
+    <div class="card" id="outercard w-25">
+        <div class="card"  *ngFor="let q of c.quizzes" id="innercard">
+          <div class="card-content">
+            <div class="card-body">
+              <div class="media d-flex">
+                <div class="align-self-center">
+                  <i class="icon-graph success font-large-2 float-left"></i>
+                </div>
+                <div class="media-body text-right">
+                  <h3>{{q.quizName}}</h3>
+                  <span>{{q.quizDifLevel}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+</div>
+
+

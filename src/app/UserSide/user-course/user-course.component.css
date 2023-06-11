@@ -1,0 +1,36 @@
+
+h1{
+  text-align: center;
+}
+.card{
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  width: 13.5rem;
+  background-color: white;
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.body{
+  background-color: aliceblue;
+}
+
+button{
+  width: 100%;
+}
+header {
+  display: flex;
+  align-items: flex-end;
+margin-bottom: 3rem;
+  }
+header .row{
+  margin-left: 45rem;
+}
+header h1{
+  margin-left: 1rem;
+}
+.image{
+  float: right;
+}

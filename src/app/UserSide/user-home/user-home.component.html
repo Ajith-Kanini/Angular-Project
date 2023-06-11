@@ -1,0 +1,59 @@
+<app-user-navbar></app-user-navbar>
+<router-outlet></router-outlet>
+<div class="container-fluid ">
+<header>
+  <!-- <h1>Welcome to CourseHUB!!!</h1> -->
+</header>
+  <main>
+    <div class="container">
+      <div class="row r1 ">
+          <div class="col">
+              <div class="card bg-c-blue order-card">
+                  <div class="card-block">
+                      <h6 class="m-b-20">Registered Users</h6>
+                      <h2 class="text-right"><i class="fa fa-user" aria-hidden="true"></i><span>{{userCount}}</span></h2>
+                      <p class="m-b-0">Active Users<span class="f-right">10</span></p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col">
+              <div class="card bg-c-green order-card">
+                  <div class="card-block">
+                      <h6 class="m-b-20">Available Courses</h6>
+                      <h2 class="text-right"><i class="fa fa-book" aria-hidden="true"></i><span>{{courseCount}}</span></h2>
+                      <p class="m-b-0">Most Popular<span class="f-right">15</span></p>
+                  </div>
+              </div>
+          </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="card bg-c-yellow order-card">
+            <div class="card-block">
+                <h6 class="m-b-20">Available Quizzes</h6>
+                <h2 class="text-right"><i class="fas fa-pen-fancy    "></i><span>{{quizCount}}</span></h2>
+                <p class="m-b-0">Top Quizzes<span class="f-right">14</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card bg-c-pink order-card">
+            <div class="card-block">
+                <h6 class="m-b-20">Most </h6>
+                <h2 class="text-right"><i class="fa fa-credit-card f-left"></i><span>486</span></h2>
+                <p class="m-b-0">Completed Orders<span class="f-right">351</span></p>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>
+  <div class="image">
+    <img src="assets/Images/SVG/Education.svg" alt="">
+  </div>
+  </main>
+  <footer class="footer">
+  <!-- <app-footer></app-footer> -->
+  </footer>
+</div>

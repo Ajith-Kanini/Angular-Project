@@ -1,0 +1,37 @@
+h1{
+  text-align: center;
+}
+.login-form {
+  border: 2px solid white;
+  padding: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 2rem;
+}
+.modal-footer{
+  margin-left: 50%;
+
+}
+.error{
+  color: red;
+}
+
+.eye-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.eye-icon i {
+  font-size: 18px;
+  color: #666;
+}
+.eye-icon i:hover {
+  color: #333;
+}
+.password-toggle input[type="password"] {
+  padding-right: 35px;
+}
