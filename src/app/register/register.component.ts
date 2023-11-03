@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IUser } from '../Service/Models/User';
 import { UserService } from '../Service/Register/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -8,7 +9,7 @@ import { UserService } from '../Service/Register/user.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
-  constructor(private usr:UserService){}
+  constructor(private usr:UserService,private router:Router){}
   user:IUser = {
     userName: '',
     mailId: '',
@@ -16,6 +17,10 @@ export class RegisterComponent {
   };
 
   onSubmit() {
-    return this.usr.createUser(this.user).subscribe(user=>this.user = user),alert("Registered successfully");
+    this.usr.createUser(this.user).subscribe(user=>this.user = user);
+    if(confirm("Registered successfully!"))
+    {
+      this.router.navigate(['/Login']);
+    }
   }
 }

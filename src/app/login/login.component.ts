@@ -34,7 +34,9 @@ export class LoginComponent {
           // Handle successful sign-in, such as redirecting to another page
           if(confirm("Logged in successfully"))
           {
+
             this.router.navigate(['/uHome']);
+            alert("Welcome to our site "+mailId)
           }
         },
         (error) => {
